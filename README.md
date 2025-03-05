@@ -14,15 +14,15 @@ The repository is sorted into multiple folders, where each folder is named after
 * gene conversion
 
 ## Getting Started
-Each directory has a README file that breaks down scripts, their purpose, and their function.
+Each folder has a README file that breaks down scripts, their purpose, and their function.
 
 ### Dependencies
-The majority of these scripts use basic python and R packages.
+The majority of these scripts use basic python and R packages. Most scripts do not require any special dependencies or walkthrough how to install necessary packages.
 
 Many of them were run on a MacOS Sonoma or [supercomputer](https://hprc.tamu.edu)
 
 ## Authors
-These scripts were primarily written by me, Emmarie Alexander. Any code that was not written or contributed by me is denoted as such.
+These scripts were primarily written by me. Any code that was not written or contributed by me is denoted as such.
 
 If you need assistance with navigating this repository, using any of these scripts, or general questions about methodology, please send me an [email](emmarie.alexander@tamu.edu) or create an issue.
 
