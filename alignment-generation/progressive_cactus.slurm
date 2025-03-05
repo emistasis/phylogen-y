@@ -21,3 +21,10 @@ fi
 
 # Run cactus (i.e. change --help to the cactus command you plan to run!)
 singularity exec cactus.img cactus ./jobstore input.txt alignment.hal --consCores 1
+
+<<CITATIONS
+	  - TAMU HPRC: https://hprc.tamu.edu/research/citations.html
+	  - Progressive Cactus: https://github.com/ComparativeGenomicsToolkit/cactus
+		- Updating Cactus alignments: https://github.com/ComparativeGenomicsToolkit/cactus/blob/master/doc/updating-alignments.md
+		- cactus-update-prepare: https://github.com/ComparativeGenomicsToolkit/cactus/blob/master/doc/cactus-update-prepare.md
+CITATIONS
