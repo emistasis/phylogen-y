@@ -9,8 +9,9 @@ The repository is sorted into multiple folders, where each folder is named after
 * de novo sex-linked sequence identification
 * alignment generation
 * detection of rare genomic changes
-* measuring evolutiuonary conservation of sites
+* measuring evolutionary conservation of sites
 * substitution rate analysis
+* gene conversion
 
 ## Getting Started
 Each directory has a README file that breaks down scripts, their purpose, and their function.
