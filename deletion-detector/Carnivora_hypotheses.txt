@@ -1,6 +1,0 @@
->Carnivora
-Canis_lupus_familiaris, Mustela_erminea, Ursus_arctos, Odobenus_rosmarus, Neomonachus_schauinslandi, Mungos_mungo, Cryptoprocta_ferox, Panthera_leo | Canis_lupus_familiaris, Mustela_erminea, Ursus_arctos, Odobenus_rosmarus, Neomonachus_schauinslandi, Mungos_mungo, Cryptoprocta_ferox, Panthera_leo
->Caniforms
-Canis_lupus_familiaris, Mustela_erminea, Ursus_arctos, Odobenus_rosmarus, Neomonachus_schauinslandi | Canis_lupus_familiaris, Mustela_erminea, Ursus_arctos, Odobenus_rosmarus, Neomonachus_schauinslandi
->Feliforms
-Mungos_mungo, Cryptoprocta_ferox, Panthera_leo | Mungos_mungo, Cryptoprocta_ferox, Panthera_leo 
