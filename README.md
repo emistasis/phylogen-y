@@ -1,33 +1,33 @@
-# phylogen-Y: using the Y-chromosome for phylogenetics
+# phylogen-Y: using the Y-chromosome for deep-time phylogenetics
 
 ## Description
 
-In this repository, you can find many of the scripts that were used for data generation and analysis of the manuscript "Using the mammalian Y-chromosome for deep-time phylogenetic inference."
+In this repository, you can find the scripts that I used to generate and analyze data for the manuscript, "The Y-chromosome is a reliable marker for deep-time phylogenetic inference."
+
+The repository is sorted into multiple folders, where each folder is named after a main method outlined in the paper. These folders contain a .README and scripts used for that methods section:
+* data collection
 
 The repository is sorted into multiple folders, where each folder is named after a method outlined in the paper. These folders house the code and scripts for that methods section:
-* data collection
 * de novo sex-linked sequence identification
 * alignment generation
-* detection of rare genomic changes
 * measuring evolutionary conservation of sites
-* substitution rate analysis
-* gene conversion
+* assessing variation in substitution rates between sex chromosomes
+* identifying gene conversion events
 
 ## Getting Started
 Each folder has a README file that breaks down scripts, their purpose, and their function.
 
 ### Dependencies
-The majority of these scripts use basic python and R packages. Most scripts do not require any special dependencies or walkthrough how to install necessary packages.
+The majority of these scripts use basic python packages (argparse, os) and R packages. Most scripts do not require any special dependencies or a walkthrough on how to install necessary packages.
 
-Many of them were run on a MacOS Sonoma or [supercomputer](https://hprc.tamu.edu)
+All code was written ran on a personal MacOS Sonomoa or the [Texas A&M HPRC cluster](https://hprc.tamu.edu).
 
 ## Authors
-These scripts were primarily written by me. Any code that was not written or contributed by me is denoted as such.
+Scripts were primarily written by me, with some debugging from Andrew Harris and Chat-GPT.
 
-If you need assistance with navigating this repository, using any of these scripts, or general questions about methodology, please send me an [email](emmarie.alexander@tamu.edu) or create an issue.
+If you need assistance with navigating this repository, using any of these scripts, or just general questions, please don't hesitate to reach out via [email](emmarie.alexander@tamu.edu) or create an issue.
 
-## CITATION
-
+## Citation
 If you use any of this code, please cite the following paper:
 
 Alexander, E.P., Foley, N.M., and Murphy, W.J. In Progress. "Using the mammalian Y-chromosome for deep-time phylogenetic inference."
