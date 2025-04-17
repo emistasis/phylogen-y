@@ -11,6 +11,8 @@
 # but uses the Rscript "pafCoordsDotPlotly.R" written by Tom Poorten 
 # (https://github.com/tpoorten/dotPlotly/tree/master)
 
+## This uses my modified version of the padCoordsDotPlotly.R. Make sure to adjust the code if you are not using this.
+
 ## Purpose: This script was written using the pafr package to filter alignments
 # generated using Winnowmap to extract the highest quality alignments that are
 # most likely Y-linked.
