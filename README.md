@@ -3,6 +3,7 @@
 In this repository, you will find all of the code that I used to generate and analyze data for the manuscript, "The Y-chromosome is a reliable marker for deep-time phylogenetic inference."
 
 The repository is sorted into multiple folders, and each folder is named after a main method in the paper. Every folder contains a README and houses the scripts used for that section:
+* data collection
 * de novo sex-linked sequence identification
 * alignment generation
 * measuring evolutionary conservation of sites
