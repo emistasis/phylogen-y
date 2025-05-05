@@ -1,5 +1,5 @@
 """
-Script title: tree_concatenator.py
+Script title: geneTree_concatenator.py
 Author: Emmarie Alexander
 Contact: emmarie.alexander@tamu.edu
 Date written: 05-February-2025
