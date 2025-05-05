@@ -8,6 +8,18 @@
 #SBATCH --output=stdout.%x.%j
 #SBATCH --error=stderr.%x.%j
 
+<<NOTE
+This slurm template can be used to run https://github.com/ggruber193/automated-window-sliding
+
+You will need to provide a slurm_settings.config file in order to run this. It's simple though, just include cpus, memory, and time. See below:
+
+process {
+    cpus = 8
+    memory = 8.GB
+    time = 10.h
+}
+NOTE
+
 module load Java/21.0.2 Nextflow/24.10.3 Anaconda3/2024.06-1 WebProxy/0000
  
 nextflow run ggruber193/automated-window-sliding -profile conda \
