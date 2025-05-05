@@ -1,11 +1,12 @@
 """
-Script title: ete3_tree_concatenator.py
+Script title: tree_concatenator.py
 Author: Emmarie Alexander
 Contact: emmarie.alexander@tamu.edu
 Date written: 05-February-2025
-Date last updated: 18-February-2025
-Purpose: The purpose of this script is to concatenate two trees (in the case of this script's utilization, the assumed species tree for mammals),
-with one tree belonging to the X-chromosome and its genes, and the other tree belonging to the Y-chromosome and its genes.
+Date last updated: 5-May-2025
+Purpose: The purpose of this script is to concatenate two trees (in the case of this script's utilization, the assumed species tree for mammals).
+
+Version 2: Adjusted the script so that the verbiage is less confusing and that it uses genes instead of gametologs.
 
 Resources:
 https://evomics.org/wp-content/uploads/2019/01/ete_tutorial.pdf
@@ -13,7 +14,7 @@ https://evomics.org/wp-content/uploads/2019/01/ete_tutorial.pdf
 #### PART ONE - CREATING A TOY PHYLOGENY ####
 from ete3 import Tree
 
-def read_gametolog_tree(filename):
+def read_gene_tree(filename):
     with open(filename, 'r') as file:
         newick_tree = file.read()
 
@@ -22,10 +23,10 @@ def read_gametolog_tree(filename):
     return tree # Returns tree object
 
 # creates a new root and concatenates both trees together
-def create_merged_tree(tree_X, tree_Y, output_file=None):
+def create_merged_tree(tree_1, tree_2, output_file=None):
     new_root = Tree()
-    new_root.add_child(tree_X)
-    new_root.add_child(tree_Y)
+    new_root.add_child(tree_1)
+    new_root.add_child(tree_2)
 
     # Converts the newly constructed tree into a rooted, ultrametric (or "cladogram" tree)
     new_root.convert_to_ultrametric(tree_length=None, strategy='balanced')
@@ -37,20 +38,20 @@ def create_merged_tree(tree_X, tree_Y, output_file=None):
 
     return new_root # Returns the merged tree
 
-# Initial gametolog trees
-X_gametolog_tree = "/Users/emmarie.alexander/Documents/GitHub/script_runner/ete3_tree_concatenator/BRA_Laurasiatheria_ZFX.tre"
-Y_gametolog_tree = "/Users/emmarie.alexander/Documents/GitHub/script_runner/ete3_tree_concatenator/BRA_Laurasiatheria_ZFY.tre"
+# Initial tree
+t1_gene_tree = ".tre" # input tree one
+t2_gene_tree = ".tre" # input tree two
 
 # Read in newick trees from file
-tree_X = read_gametolog_tree(X_gametolog_tree)
-tree_Y = read_gametolog_tree(Y_gametolog_tree)
+tree_1 = read_gene_tree(t1_gene_tree)
+tree_2 = read_gene_tree(t2_gene_tree)
 
-output_file = "/Users/emmarie.alexander/Documents/GitHub/script_runner/ete3_tree_concatenator/Laurasiatheria_concatenated_ZFY_ZFX.tre"
+output_file = ".tre" # output file, you'll use this in the next step
 
-merged_tree = create_merged_tree(tree_X, tree_Y, output_file)
+merged_tree = create_merged_tree(tree_1, tree_2, output_file)
 print(merged_tree)
 
-######################## STEP TWO - PRUNING SPECIES TIPS ######################## 
+######################## STEP TWO - PRUNE SPECIES TIPS ######################## 
 # Load the species list from a text file
 def load_species_list(filename):
     with open(filename, 'r') as file:
@@ -84,10 +85,9 @@ def prune_tree(tree_file, species_list, final_output_tree=None):
     return tree
 
 # input files
-species_list = "/user/path/ete3_tree_concatenator/Laurasiatheria_ZFY_ZFX_species_list.txt"
-tree_file = "/user/path/ete3_tree_concatenator/Laurasiatheria_concatenated_ZFY_ZFX.tre"
-final_output_tree = "/user/path/ete3_tree_concatenator/Laurasiatheria_ZFY_ZFX_for_IQTREE.tre"
+species_list = ".txt" # path to a text file containing a list of what species you want in your final tree
+tree_file = ".tre" # path to the input tree
+final_output_tree = ".tre" # path to what you want your final output tree to be
 
-    
 pruned_tree = prune_tree(tree_file, species_list, final_output_tree)
 print(pruned_tree)
