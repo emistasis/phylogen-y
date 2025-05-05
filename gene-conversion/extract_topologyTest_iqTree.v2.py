@@ -1,5 +1,5 @@
 """
-Script title: iqtree_topologyTest_extractor.v2.py
+Script title: extract_topologyTest_iqTree.py
 Author: Emmarie Alexander
 Date written: 2-April-2025
 Last updated: 2-April-2025
