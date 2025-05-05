@@ -1,5 +1,5 @@
 """
-Script title: treefile_merger.v3.py
+Script title: treFile_merger.py
 Author: Emmarie Alexander
 Date written: 1-April-2025
 Last updated: 1-April-2025
