@@ -7,7 +7,7 @@ Each folder contains a README that states the purpose of each script.
 
 The repository itself is sorted into multiple folders, with each folder named after a main method in the paper:
 * data collection
-* de novo sex-linked sequence identification
+* sex-linked sequence identification
 * alignment generation
 * measuring evolutionary conservation of sites
 * assessing variation in substitution rates between sex chromosomes
