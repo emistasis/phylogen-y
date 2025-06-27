@@ -1,12 +1,11 @@
 """
-Script title: geneTree_concatenator.py
+Script title: tree_concatenator.py
 Author: Emmarie Alexander
 Contact: emmarie.alexander@tamu.edu
 Date written: 05-February-2025
 Date last updated: 5-May-2025
+Summary v2: Adjusted the script so that the script is less confusing and uses genes instead of gametologs, making it more versatile.
 Purpose: The purpose of this script is to concatenate two trees (in the case of this script's utilization, the assumed species tree for mammals).
-
-Version 2: Adjusted the script so that the verbiage is less confusing and that it uses genes instead of gametologs.
 
 Resources:
 https://evomics.org/wp-content/uploads/2019/01/ete_tutorial.pdf
