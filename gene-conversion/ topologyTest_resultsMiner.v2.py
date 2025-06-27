@@ -18,17 +18,17 @@ def main(args):
     """
     Extracts the tree topology results that appear underneath "USER TREES" in the .iqtree report.
 
-    iqtree_dir: Path to the folder containing iqtree files.
+    input_dir: Path to the folder containing iqtree files.
     file_suffix: File extension specifying .iqtree
     output_file: Path to the generated output file.
     """
-    iqtree_dir = args.iqtree_dir
+    input_dir = args.input_dir
     output_file = args.output_file
     file_suffix = args.file_suffix
 
     # Get filenames and sort them numerically
     filenames = sorted(
-        (f for f in os.listdir(iqtree_dir) if f.endswith(file_suffix)),
+        (f for f in os.listdir(input_dir) if f.endswith(file_suffix)),
         key=lambda x: int(re.search(r"(\d+)", x).group(1)) if re.search(r"(\d+)", x) else float('inf')
     )
 
@@ -38,7 +38,7 @@ def main(args):
 
     with open(output_file, "a", encoding="utf-8") as out_file:
         for filename in filenames:
-            file_path = os.path.join(iqtree_dir, filename)
+            file_path = os.path.join(input_dir, filename)
 
             if os.path.isfile(file_path):
                 print(f"Processing {filename}")
@@ -60,7 +60,7 @@ def main(args):
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="Process .iqtree files and generate an output file containing all topology test results.")
-    parser.add_argument("--iqtree_dir", required=True, help="Path to the directory containing the .iqtree files.")
+    parser.add_argument("--input_dir", required=True, help="Path to the directory containing the .iqtree files.")
     parser.add_argument("--output_file", required=True, help="Path to the file that will contain the results.")
     parser.add_argument("--file_suffix", required=True, help="Specify the file extension. This should always be set to .iqtree")
 
