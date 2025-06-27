@@ -1,13 +1,12 @@
 """
-Script title: extract_topologyTest_iqTree.py
+Script title: topologyTest_resultsMiner.py
 Author: Emmarie Alexander
 Date written: 2-April-2025
 Last updated: 2-April-2025
-
 Summary v2: Sorting by numerical order (human-sorting), argparse.
 Summary v1: There appears to be differences in the number of treefiles in the unconstrained and constrained directories. I need to modify the script to count number of files and make sure they're the same.
+Purpose: This CLI script works to go through all of the output .iqtree files after performing an alternative topology test. It will extract the statistics from the topology tests performed.
 
-Purpose: This script works to extract the topology test outputs from multiple .iqtree files
 """
 
 import os
