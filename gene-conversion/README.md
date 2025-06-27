@@ -14,5 +14,5 @@ Since we used GHOST as our sequence model for the sliding window analysis, each 
 #### 4. treeFile_merger.py
 This script merges multiple IQ-TREE .treefiles in order to create a single .treefile that contains multiple trees from separate IQ-TREE runs. Basically, this script is helpful if you're trying to perform a constraint tree search. 
 
-#### 5. extract_topologyTest_iqTree.py
+#### 5. topologyTest_resultsMiner.py
 This script works to extract the topology test outputs from multiple .iqtree files after performing an alternative topology test.
