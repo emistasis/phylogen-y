@@ -1,11 +1,11 @@
 """
-Script title: arborist_find_extract_clean.v2.py
+Script title: iqtree-arborist.v2.py
 Author: Emmarie Alexander
 Contact: emmarie.alexander@tamu.edu
 Date written: 21-Feb-2025
-Date last updated: 09-June-2025
-Purpose: When running a sliding window analysis, IQ-TREE is run for each window and outputs a series of files. One of these files is the .treefile, which contains the best tree. However, since we used the GHOST model, there is a tree outputted for each parameter.
-The purpose of this CLI script is to extract the best tree (the first line) for each window from its .treefile.
+Date last updated: 26-June-2025
+Purpose: When performing a sliding window analysis, IQ-TREE will be ran individually for each window, outputting a series of files. The most important of these files will be the .treefile, which contains the best tree. However, since the GHOST model is used, a tree is provided for each parameter (i.e., 4 trees).
+The purpose of this CLI script is to extract the best tree (or the first line) for each file (or window) from the .treefile.
 """
 
 import os
@@ -61,7 +61,7 @@ if __name__ == "__main__":
     )
     parser.add_argument("--input_dir", required=True, help="Directory containing your .treefiles.")
     parser.add_argument("--file_extension", default=".tre", help="File extension for tree files (default: .tre).")
-    parser.add_argument("--output_dir", required=True, help="Directory to copy tree files into.")
+    parser.add_argument("--output_dir", required=True, help="Directory to copy treefiles into.")
     parser.add_argument("--output_file", required=True, help="File to store the extracted first lines.")
     parser.add_argument("--cleaned_file", required=True, help="File to store the cleaned output.")
 
