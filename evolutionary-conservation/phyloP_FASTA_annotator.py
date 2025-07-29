@@ -1,10 +1,13 @@
 """
-Script title: phyloP_FASTA_annotator.py
+Script title: phyloP_FASTA_annotator.v2.py
 Author: Emmarie Alexander
 Date written: 08-January-2025
-Date last updated: 09-January-2025
+Date last updated: 29-Jul-2025
+Version: 2.0
 Purpose: This CLI python-based script allows users to annotate their FASTA file with phyloP scores and then filter sites based on a user provided threshold to create a new FASTA file.
-Note: I have provided the environment file to run this script - the YML is called phyloP_env.yml
+Notes: I have provided the environment file to run this script - the YML is called phyloP_env.yml.
+If you want to generate a .svg file of your plot, you need to add the '.svg' extension at the end of your argument... e.g., "--plot HRA_phyloP_distributions.svg"
+The PhyloP program will output a .txt file that contains phyloP scores per site. Use this as your "phyloP" file.
 """
 import argparse
 import os
@@ -15,6 +18,9 @@ import matplotlib.pyplot as plt
 # Set-up the log file
 def setup_logger(log_file):
     """Set up the logger to write to both a log file and the console."""
+    # Reconfigure logging just in case
+    for handler in logging.root.handlers[:]:
+        logging.root.removeHandler(handler)
     logging.basicConfig(
         level=logging.INFO,
         format="%(asctime)s - %(levelname)s - %(message)s",
@@ -27,14 +33,14 @@ def setup_logger(log_file):
 
 # Configure output directory
 def ensure_output_dir_exists(output_dir):
-    """Ensure the output directory does indeed exist, create it if it does not."""
+    """Ensure that output directory exists, and create it if it does not."""
     if not os.path.exists(output_dir):
         logging.info(f"Creating output directory: {output_dir}")
         os.makedirs(output_dir)
 
 
 def parse_fasta(fasta_file):
-    """Parse FASTA file and convert it to a tabular format."""
+    """Parse input FASTA file and convert it to a tabular format."""
     logging.info(f"Parsing FASTA file: {fasta_file}")
     try:
         with open(fasta_file, 'r') as f:
@@ -63,7 +69,7 @@ def parse_fasta(fasta_file):
 
 
 def read_phyloP_scores(phyloP_file):
-    """Read the phyloP scores from a file."""
+    """Read the phyloP scores from text file."""
     logging.info(f"Reading phyloP scores file: {phyloP_file}")
     try:
         with open(phyloP_file, 'r') as f:
@@ -74,7 +80,7 @@ def read_phyloP_scores(phyloP_file):
     except Exception as e:
         logging.error(f"Error reading phyloP scores file: {e}")
         raise
-
+        
 
 def count_scores_in_range(scores, score_range):
     """Count the number of scores within a given range."""
@@ -102,6 +108,7 @@ def write_summary_file(output_dir, conserved_count, conserved_range, neutral_cou
         logging.error(f"Error writing summary file: {e}")
         raise
 
+
 def write_csv(file_path, species_names, alignment_matrix, phyloP_scores):
     """Write alignment and phyloP scores to a CSV file."""
     logging.info(f"Writing CSV file: {file_path}")
@@ -119,7 +126,7 @@ def write_csv(file_path, species_names, alignment_matrix, phyloP_scores):
         raise
 
 def write_fasta(file_path, species_names, alignment_matrix):
-    """Write alignment back to FASTA format."""
+    """Convert the CSV file back into FASTA format."""
     logging.info(f"Writing FASTA file: {file_path}")
     try:
         with open(file_path, 'w') as f:
@@ -129,6 +136,7 @@ def write_fasta(file_path, species_names, alignment_matrix):
         logging.info(f"Successfully wrote FASTA file: {file_path}")
     except Exception as e:
       logging
+
 
 def plot_phyloP_distribution(phyloP_scores, conserved_range, neutral_range, accelerated_range, output_path=None):
     """Plot the distribution of phyloP scores with defined ranges and labels."""
@@ -154,7 +162,7 @@ def plot_phyloP_distribution(phyloP_scores, conserved_range, neutral_range, acce
         plt.legend()
 
         if output_path:
-            plt.savefig(output_path)
+            plt.savefig(output_path, format=".svg")
             logging.info(f"Saved phyloP distribution plot to {output_path}")
         else:
             plt.show()
@@ -245,7 +253,7 @@ if __name__ == "__main__":
     parser.add_argument("--fasta", required=True, help="Path to the input FASTA file.")
     parser.add_argument("--phyloP", required=True, help="Path to the file containing phyloP scores.")
     parser.add_argument("--output_dir", required=True, help="Directory to save output files.")
-    parser.add_argument("--plot", help="Path to save the phyloP score distribution plot (optional).")
+    parser.add_argument("--plot", required=False, help="Path to save the phyloP score distribution plot (optional).")
     parser.add_argument("--log_file", default="script.log", help="Path to save the log file.")
     parser.add_argument("--min_cutoff", type=float, default="-0.5", help="Minimum phyloP score for filtering cutoff")
     parser.add_argument("--max_cutoff", type=float, default=0.5, help="Maximum phyloP score for filtering cutoff")
