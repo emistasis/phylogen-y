@@ -13,9 +13,9 @@ Each folder contains a README that states the purpose of the script(s). Folders 
 * [identification of gene conversion](https://github.com/emistasis/phylogen-y/tree/main/gene-conversion)
 
 ### Dependencies
-The majority of these scripts use basic Python packages (argparse, os) and R packages). Most scripts do not require special dependencies or installation instructions. I do not provide Conda environment files for most scripts, but dependencies are clearly listed at the start of the code.
+Most scripts use basic Python packages (argparse, os) or R packages; therefore, the scripts do not require special dependencies or installation instructions. I do not provide conda environment files for most scripts, but dependencies are clearly listed at the start of the code.
 
-All code was ran on a personal MacOS Sonoma or the [Texas A&M HPRC cluster](https://hprc.tamu.edu). I do provide some SLURM job scripts.
+All code was ran on a personal MacOS M1 Pro or the [Texas A&M HPRC cluster](https://hprc.tamu.edu). Hence, some scripts are written to be executed on a SLURM cluster.
 
 ### Citation
 If you use any of this code, please cite the following paper:
