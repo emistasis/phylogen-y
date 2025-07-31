@@ -11,8 +11,7 @@
 ##SBATCH --mail-type=BEGIN,FAIL,END
 
 ##################### SYNOPSIS #####################
-# This script will generate Winnowmap alignments for scaffold-level genomes of species that do not have assembled Y chromosomes
-# to closely related, slowly evolving species that have an assembled Y chromosome.
+# This script will generate Winnowmap alignments for scaffold-level genomes of species that do not have assembled Y chromosomes to closely related, slowly evolving species that have an assembled Y chromosome.
 
 ##################### LOAD #####################
 module load Anaconda3/2023.07-2
