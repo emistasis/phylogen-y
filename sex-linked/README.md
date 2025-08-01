@@ -1,4 +1,4 @@
-# README for /sex-linked/
+# README for identif-Y-er
 
 *Scripts are listed in the order of their usage.*
 
