@@ -1,0 +1,9 @@
+iqtree2 -s BRA_4genes_codingSeq_final.fasta	-nt AUTO -m GTR*H4 -bb 1000 -pre BRA_4genes_codingSeq_final
+iqtree2 -s BRA_4genes_exons_final.fasta	-nt AUTO -m GTR*H4 -bb 1000 -pre BRA_4genes_exons_final
+iqtree2 -s BRA_4genes_final.fasta -nt AUTO -m GTR*H4 -bb 1000 -pre BRA_4genes_final
+iqtree2 -s BRA_4genes_intergenic_final.fasta -nt AUTO -m GTR*H4 -bb 1000 -pre BRA_4genes_intergenic_final
+iqtree2 -s BRA_4genes_introns_final.fasta -nt AUTO -m GTR*H4 -bb 1000 -pre BRA_4genes_introns_final
+iqtree2 -s BRA_4genes_noncoding_final.fasta -nt AUTO -m GTR*H4 -bb 1000 -pre BRA_4genes_noncoding_final
+iqtree2 -s BRA_5genes_codingSeq_final.fasta -nt AUTO -m GTR*H4 -bb 1000 -pre BRA_5genes_codingSeq_final
+iqtree2 -s BRA_5genes_exons_final.fasta	-nt AUTO -m GTR*H4 -bb 1000 -pre BRA_5genes_exons_final
+iqtree2 -s BRA_5genes_final.fasta -nt AUTO -m GTR*H4 -bb 1000 -pre BRA_5genes_final
