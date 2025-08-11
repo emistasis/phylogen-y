@@ -1,0 +1,12 @@
+iqtree2 -s HRA_4genes_CDS.fasta -z BRA_all_alternative_hypotheses.treefile -m GTR*H4 -zb 10000 -zw -au -n 0 --prefix HRA_4genes_CDS_BRA_trees
+iqtree2 -s HRA_4genes_exons_UTRs.fasta -z BRA_all_alternative_hypotheses.treefile -m GTR*H4 -zb 10000 -zw -au -n 0 --prefix HRA_4genes_exons_UTRs_BRA_trees
+iqtree2 -s HRA_4locus_noncoding.fasta -z BRA_all_alternative_hypotheses.treefile -m GTR*H4 -zb 10000 -zw -au -n 0 --prefix HRA_4locus_noncoding_BRA_trees
+iqtree2 -s HRA_5genes_CDS.fasta -z BRA_all_alternative_hypotheses.treefile -m GTR*H4 -zb 10000 -zw -au -n 0 --prefix HRA_5genes_CDS_BRA_trees
+iqtree2 -s HRA_5genes_exons_UTRs.fasta -z BRA_all_alternative_hypotheses.treefile -m GTR*H4 -zb 10000 -zw -au -n 0 --prefix HRA_5genes_exons_UTRs_BRA_trees
+iqtree2 -s HRA_introns.fasta -z BRA_all_alternative_hypotheses.treefile -m GTR*H4 -zb 10000 -zw -au -n 0 --prefix HRA_introns_BRA_trees
+iqtree2 -s HRA_4genes_CDS.fasta -z HRA_all_alternative_hypotheses.treefile -m GTR*H4 -zb 10000 -zw -au -n 0 --prefix HRA_4genes_CDS_HRA_trees
+iqtree2 -s HRA_4genes_exons_UTRs.fasta -z HRA_all_alternative_hypotheses.treefile -m GTR*H4 -zb 10000 -zw -au -n 0 --prefix HRA_4genes_exons_UTRs_HRA_trees
+iqtree2 -s HRA_4locus_noncoding.fasta -z HRA_all_alternative_hypotheses.treefile -m GTR*H4 -zb 10000 -zw -au -n 0 --prefix HRA_4locus_noncoding_HRA_trees
+iqtree2 -s HRA_5genes_CDS.fasta -z HRA_all_alternative_hypotheses.treefile -m GTR*H4 -zb 10000 -zw -au -n 0 --prefix HRA_5genes_CDS_HRA_trees
+iqtree2 -s HRA_5genes_exons_UTRs.fasta -z HRA_all_alternative_hypotheses.treefile -m GTR*H4 -zb 10000 -zw -au -n 0 --prefix HRA_5genes_exons_UTRs_HRA_trees
+iqtree2 -s HRA_introns.fasta -z HRA_all_alternative_hypotheses.treefile -m GTR*H4 -zb 10000 -zw -au -n 0 --prefix HRA_introns_HRA_trees
