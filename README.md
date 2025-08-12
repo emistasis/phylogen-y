@@ -18,9 +18,9 @@ Most scripts use basic Python packages (argparse, os) or R packages; therefore, 
 All code was ran on a personal MacOS M1 Pro or the [Texas A&M HPRC cluster](https://hprc.tamu.edu). Hence, some scripts are written to be executed on a SLURM cluster.
 
 ### Citation
-If you use any of this code, please cite the following paper:
+If you use any of this code, please cite **_both_** the following paper and Zenodo repository:
 
-Alexander, E.P., Foley, N.M., and Murphy, W.J. In Review. "Using the mammalian Y-chromosome for deep-time phylogenetic inference."
+Alexander, E.P., Foley, N.M., and Murphy, W.J. In Review. "Using the mammalian Y-chromosome for deep-time phylogenetic inference." [![DOI](https://zenodo.org/badge/943486982.svg)](https://doi.org/10.5281/zenodo.16809373)
  
 ### Support
 If you need assistance with navigating this repository, running any of these scripts, or just general questions, please don't hesitate to reach out via [email](emmarie.alexander@tamu.edu) or create an issue.
